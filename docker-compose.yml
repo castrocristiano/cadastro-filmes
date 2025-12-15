@@ -2,8 +2,7 @@ version: "3.9"
 
 services:
   web:
-    build: .
-    container_name: php_web
+    image: localhost/filmes_php:latest
     ports:
       - "8080:80"
     volumes:
@@ -12,11 +11,18 @@ services:
       - db
 
   db:
-    image: postgres:15
-    container_name: postgres_db
+    image: docker.io/library/postgres:15
     environment:
       POSTGRES_DB: cinema
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: app_pass
     ports:
       - "5432:5432"
+
+  pgadmin:
+    image: docker.io/dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
