@@ -5,8 +5,6 @@ services:
     image: localhost/filmes_php:latest
     ports:
       - "8080:80"
-    volumes:
-      - ./:/var/www/html:Z
     depends_on:
       - db
 
