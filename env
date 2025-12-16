@@ -67,12 +67,13 @@ CI_ENVIRONMENT = development
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
-
 database.default.hostname = db
 database.default.database = cinema
 database.default.username = app_user
 database.default.password = app_pass
-database.default.DBDriver = PostgreSQL
+database.default.DBDriver = Postgre
 database.default.port = 5432
+database.default.charset = UTF8
+database.default.DBPrefix =
 
 logger.threshold = 4
