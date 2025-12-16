@@ -14,7 +14,7 @@ adotando boas práticas de desenvolvimento web e conteinerização com
 ## 🛠️ Tecnologias Utilizadas
 
 -   PHP 8.2\
--   CodeIgniter 4\
+-   ["CodeIgniter 4"]("https://codeigniter.com/user_guide/index.html")\
 -   PostgreSQL 15\
 -   Apache 2.4\
 -   Podman\
@@ -89,6 +89,8 @@ podman-compose up -d
 -   Aplicação: http://localhost:8080\
 -   pgAdmin: http://localhost:8081
 
+```php spark migrate```
+
 Usuário: admin@admin.com\
 Senha: admin
 
@@ -127,8 +129,7 @@ de uma Aplicação**.
 
 ## 👤 Autor
 
-**Cristiano da Silva Castro**\
-Tutor(a): **Simone Cristina Aléssio**
+**Cristiano da Silva Castro**
 
 ------------------------------------------------------------------------
 

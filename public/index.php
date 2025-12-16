@@ -1,11 +1,17 @@
 <?php
 
-use CodeIgniter\Boot;
-use CodeIgniter\Config\Paths;
+// Path to the front controller (this file)
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
-require __DIR__ . '/../vendor/autoload.php';
+require FCPATH . '../vendor/autoload.php';
 
-$paths = new Paths();
+$pathsConfig = FCPATH . '../app/Config/Paths.php';
+require_once $pathsConfig;
 
-$app = Boot::bootWeb($paths);
+$paths = new Config\Paths();
+
+// Load the framework bootstrap file
+$bootstrap = new CodeIgniter\Boot($paths);
+$app = $bootstrap->bootWeb($paths); // <-- Corrigido aqui
+
 $app->run();
