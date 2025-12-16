@@ -1,13 +1,11 @@
-// app/Controllers/Home.php
+<?php
+
 namespace App\Controllers;
-use App\Models\FilmeModel;
 
 class Home extends BaseController
 {
-    public function index()
+    public function index(): string
     {
-        $model = new FilmeModel();
-        $data['filmes'] = $model->findAll();
-        return view('home', $data);
+        return view('welcome_message');
     }
 }
