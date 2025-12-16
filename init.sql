@@ -3,6 +3,7 @@ CREATE TABLE public.filmes (
 	titulo varchar(255) NOT NULL,
 	ano int4 NOT NULL,
 	avaliacao int4 NULL,
+	datacadastro timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT filmes_avaliacao_check CHECK (((avaliacao >= 1) AND (avaliacao <= 5))),
 	CONSTRAINT filmes_pkey PRIMARY KEY (id)
 );
