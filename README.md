@@ -65,7 +65,7 @@ sudo apt install -y podman podman-compose
 ### 1️⃣ Clonar o repositório
 
 ``` bash
-git clone https://github.com/seu-usuario/cadastro-filmes.git
+git clone https://github.com/castrocristiano/cadastro-filmes.git
 cd cadastro-filmes
 ```
 
